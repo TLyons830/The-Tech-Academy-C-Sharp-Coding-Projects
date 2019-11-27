@@ -96,23 +96,20 @@ namespace Step103
             Console.WriteLine(" ");
 
             List<string> packers = new List<string>() { "AARON", "DAVANTE", "AARON", "JIMMY", "BLAKE" };
+            List<String> emptyList = new List<string> { };
 
-            int count = 0;
             foreach (string packer in packers)
             {
-                for (int i = 0; i < packers.Count; i++)
+                if (!emptyList.Contains(packer))
                 {
-                    for (int j = i; j < packers.Count - 1; j++)
-                    {
-                        if(packers[i] == packers[j + 1])
-                        {
-                            count = count + 1;
-                        }
-                    }
+                    emptyList.Add(packer);
+                    Console.WriteLine("This name has not already appeared on the list: " +packer);
                 }
-                Console.WriteLine(packer + " Instances: "+count);
+                else if (emptyList.Contains(packer))
+                {
+                    Console.WriteLine("This name has already appeared on the list: " + packer);
+                }
             }
-
             Console.ReadLine();
         }
     }
