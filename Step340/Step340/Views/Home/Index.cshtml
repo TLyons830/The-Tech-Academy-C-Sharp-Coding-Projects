@@ -1,0 +1,43 @@
+﻿<div class="card-header text-center">
+    <h5 class="m-0">Get your quote</h5>
+</div>
+
+@using (Html.BeginForm("SignUp", "Home", FormMethod.Post))
+{
+    <div class="form-group">
+        <input name="FirstName" type="text" class="form-control" placeholder="First Name" />
+    </div>
+    <div class="form-group">
+        <input name="LastName" type="text" class="form-control" placeholder="Last Name" />
+    </div>
+    <div class="form-group">
+        <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" />
+    </div>
+    <div class="form-group">
+        Date of Birth:<input name="DateOfBirth" type="date" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input name="CarYear" type="number" class="form-control" placeholder="Car year" />
+    </div>
+    <div class="form-group">
+        <input name="CarMake" type="text" class="form-control" placeholder="Car Make" />
+    </div>
+    <div class="form-group">
+        <input name="CarModel" type="text" class="form-control" placeholder="Car Model" />
+    </div>
+    <div class="form-group">
+        <input name="Dui" type="text" class="form-control" placeholder="Have you ever had DUI? Y or N" />
+    </div>
+    <div class="form-group">
+        <input name="SpeedingTickets" type="number" class="form-control" placeholder="Number Of Speeding Tickets. If 0, type 0." />
+    </div>
+    <div class="form-group">
+        <p>If you would like full coverage, type "Y" below, otherwise, type "N"</p>
+        <input name="FullCoverage" type="text" class="form-control" placeholder="Type 'Y' for full coverage" />
+    </div>
+    <div class="form-group">
+        <p>If you do not want full coverage, and just liabilty coverage, type "Y" below, otherwise, type "N"</p>
+        <input name="Liability" type="text" class="form-control" placeholder="Type 'Y' for liability coverage" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+}
